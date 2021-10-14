@@ -1,0 +1,265 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Georama", sans-serif;
+  background: #ed5f5e;
+}
+
+a {
+  text-decoration: none;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#app header {
+  grid-column: 1 / 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+  padding: 30px 60px;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+
+#app header h1 {
+  font-family: "Indie Flower", cursive;
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+#app header a {
+  font-size: 1.25rem;
+  letter-spacing: 1.5px;
+  color: #000;
+  margin-right: 25px;
+  transition: all 0.3s;
+}
+
+#app header a:hover {
+  color: #ed5f5e;
+  border-bottom: 1px solid #ed5f5e;
+}
+
+#app header a:last-child {
+  background: #f53737;
+  color: #fff;
+  padding: 10px;
+  transition: all 0.3s;
+}
+
+#app header a:last-child:hover {
+  background: #fc7070;
+  transform: scale(1.1);
+}
+
+/**/
+
+#introducao {
+  grid-column: 1 / 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px;
+  margin-top: 60px;
+}
+
+#introducao h1 {
+  font-size: 3rem;
+  letter-spacing: 2.5px;
+  margin-bottom: 5px;
+}
+
+#introducao h3 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 25px;
+}
+
+#introducao input {
+  font-family: "Georama";
+  font-size: 1.25rem;
+  border: 1px solid #fff;
+  padding: 15px;
+  width: 60%;
+  outline: 0;
+}
+
+#introducao span {
+  font-size: 1.25rem;
+  background: #f53737;
+  color: #fff;
+  position: relative;
+  left: -10%;
+  padding: 16px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+#introducao span:hover {
+  background: #fc5151;
+}
+
+/**/
+
+#itens {
+  grid-column: 1 / 5;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  padding: 30px;
+  background: #fff;
+}
+
+#itens div {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  margin: 10px;
+}
+
+#itens h1 {
+  margin-bottom: 5px;
+}
+
+#itens h3 {
+  font-weight: normal;
+  line-height: 35px;
+  margin-bottom: 25px;
+}
+
+#itens img {
+  width: 100px;
+}
+
+#itens p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px;
+}
+
+#itens sub {
+  font-size: 1.25rem;
+  font-weight: normal;
+  letter-spacing: 1.25px;
+}
+
+#itens a {
+  display: block;
+  background: #f53737;
+  color: #fff;
+  border: 1px solid #f53737;
+  padding: 10px;
+  width: 180px;
+  margin: 15px auto;
+  transition: all 0.3s;
+}
+
+#itens a:hover {
+  background: #ed5f5e;
+  transform: scale(1.1);
+}
+
+/**/
+
+#rodape {
+  grid-column: 1 / 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px;
+}
+
+#rodape p {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+}
+
+/**/
+
+@media(max-width: 990px) {
+  #app header {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 20px;
+  }
+
+  #introducao {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-top: 100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  #introducao img {
+    margin: 0 auto;
+  }
+
+  #itens {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px;
+  }
+
+  #rodape {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 20px;
+    text-align: center;
+  }
+}
+
+@media(max-width: 740px) {
+  #app header h1 {
+    font-size: 1.5rem;
+  }
+
+  #app header a {
+    font-size: 1rem;
+  }
+
+  #itens {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
+  }
+}
+
+@media(max-width: 560px) {
+  #app header a:last-child {
+    display: block;
+    width: 50%;
+    margin: 10px auto 0px auto;
+  }
+
+  #introducao {
+    padding-top: 180px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  #introducao img {
+    display: none;
+  }
+
+  #introducao h1 {
+    font-size: 1.75rem;
+  }
+
+  #introducao span {
+    padding: 17px;
+  }
+
+  #itens {
+    grid-template-columns: 1fr;
+    background: #fff;
+  }
+}
