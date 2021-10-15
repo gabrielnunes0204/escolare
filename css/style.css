@@ -176,6 +176,10 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 30px 60px;
+  background: #ed5f5e;
+  position: relative;
+  bottom: 0px;
+  width: 100%;
 }
 
 #rodape p {
@@ -263,3 +267,4 @@ a {
     background: #fff;
   }
 }
+

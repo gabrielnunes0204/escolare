@@ -16,12 +16,11 @@
 </head>
 
 <body>
-
   <div id="app">
     <header>
       <h1> Escolare </h1>
       <div>
-        <a href="#itens" @click.prevent="scrollSuave"> O que temos </a>
+        <a href="#itens" @click.prevent="scrollSuave"> Nossos cursos </a>
         <a href="" @click.prevent> R$ {{valorTotal}} </a>
         <a href="" @click.prevent> Carrinho {{carrinho}} </a>
         <a href="" @click.prevent="finalizarCompra"> Finalizar compra </a>
@@ -149,10 +148,7 @@
             this.carrinho = 0;
           }
         }
-      },
-      // created() {
-      //   alert(window.innerWidth);
-      // }
+      }
     });
   </script>
 
