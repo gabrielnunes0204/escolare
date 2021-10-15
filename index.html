@@ -21,7 +21,7 @@
       <h1> Escolare </h1>
       <div>
         <a href="#itens" @click.prevent="scrollSuave"> Nossos cursos </a>
-        <a href="" @click.prevent> R$ {{valorTotal}} </a>
+        <a href="" @click.prevent> {{valorTotal | numeroPreco}} </a>
         <a href="" @click.prevent> Carrinho {{carrinho}} </a>
         <a href="" @click.prevent="finalizarCompra"> Finalizar compra </a>
       </div>
@@ -148,7 +148,15 @@
             this.carrinho = 0;
           }
         }
-      }
+      },
+      filters: {
+				numeroPreco(valor) {
+					return valor.toLocaleString("pt-BR", {
+						style: "currency",
+						currency: "BRL",
+					});
+				},
+			},
     });
   </script>
 
