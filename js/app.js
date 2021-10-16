@@ -7,7 +7,7 @@ const vm = new Vue({
   },
   methods: {
     fetchCursos() {
-      const url = '../api/dados.json';
+      const url = 'api/dados.json';
       fetch(url).then((response) => {
         response.json().then((body) => {
           this.cursos = body;
