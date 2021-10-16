@@ -40,7 +40,7 @@
       <div v-for="curso in cursos" :key="curso.id">
         <h1> {{curso.nome}} </h1>
         <h3> {{curso.descricao}} <br> {{curso.tempo}} </h3>
-        <img :src="curso.imagem" alt="hmtl">
+        <img :src="curso.imagem" :alt="curso.nome">
         <p> R$ <sub>{{curso.valor}}</sub> </p>
         <a href="" @click.prevent="adicionarCurso"> Comprar Curso </a>
       </div>
