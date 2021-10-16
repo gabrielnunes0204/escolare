@@ -1,0 +1,66 @@
+[
+  {
+    "id": "html5",
+    "nome": "HTML 5",
+    "descricao": "Curso completo de HTML 5",
+    "tempo": "15 horas",
+    "valor": "199.00",
+    "imagem": "../images/tecno/html.png"
+  },
+  {
+    "id": "css",
+    "nome": "CSS 3",
+    "descricao": "Curso completo de CSS 3",
+    "tempo": "35 horas",
+    "valor": "199.00",
+    "imagem": "../images/tecno/css.png"
+  },
+  {
+    "id": "javascript",
+    "nome": "JavaScript",
+    "descricao": "Curso completo de JS ES6",
+    "tempo": "80 horas",
+    "valor": "299.00",
+    "imagem": "../images/tecno/js.png"
+  },
+  {
+    "id": "vuejs",
+    "nome": "VueJS",
+    "descricao": "Curso completo de VueJS",
+    "tempo": "120 horas",
+    "valor": "599.00",
+    "imagem": "../images/tecno/vue.png"
+  },
+  {
+    "id": "ui_ux",
+    "nome": "UI e UX Design",
+    "descricao": "Curso completo de UI e UX",
+    "tempo": "120 horas",
+    "valor": "399.00",
+    "imagem": "../images/tecno/ui_ux.png"
+  },
+  {
+    "id": "react",
+    "nome": "React",
+    "descricao": "Curso completo de React",
+    "tempo": "160 horas",
+    "valor": "699.00",
+    "imagem": "../images/tecno/react.png"
+  },
+  {
+    "id": "wordpress",
+    "nome": "WordPress",
+    "descricao": "Curso completo de WP",
+    "tempo": "100 horas",
+    "valor": "399.00",
+    "imagem": "../images/tecno/wp.png"
+  },
+  {
+    "id": "angular",
+    "nome": "Angular 2.0",
+    "descricao": "Curso completo de Angular",
+    "tempo": "180 horas",
+    "valor": "699.00",
+    "imagem": "../images/tecno/angular.png"
+  }
+]

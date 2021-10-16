@@ -1,6 +1,5 @@
 ﻿<!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,60 +37,11 @@
     </section>
 
     <section id="itens">
-      <div>
-        <h1> HTML 5 </h1>
-        <h3> Curso completo de HTML 5 <br> 15 horas </h3>
-        <img src="images/tecno/html.png" alt="hmtl">
-        <p> R$ <sub>199.00</sub> </p>
-        <a href="" @click.prevent="adicionarCurso"> Comprar Curso </a>
-      </div>
-      <div>
-        <h1> CSS 3 </h1>
-        <h3> Curso completo de CSS 3 <br> 35 horas </h3>
-        <img src="images/tecno/css.png" alt="css">
-        <p> R$ <sub>199.00</sub> </p>
-        <a href="" @click.prevent="adicionarCurso"> Comprar Curso </a>
-      </div>
-      <div>
-        <h1> JavaScript </h1>
-        <h3> Curso completo de JS ES6 <br> 60 horas </h3>
-        <img src="images/tecno/js.png" alt="javascript">
-        <p> R$ <sub>299.00</sub> </p>
-        <a href="" @click.prevent="adicionarCurso"> Comprar Curso </a>
-      </div>
-      <div>
-        <h1> VUEJS </h1>
-        <h3> Curso completo de VueJS <br> 120 horas </h3>
-        <img src="images/tecno/vue.png" alt="vue">
-        <p> R$ <sub>299.00</sub> </p>
-        <a href="" @click.prevent="adicionarCurso"> Comprar Curso </a>
-      </div>
-      <div>
-        <h1> UI e UX Design </h1>
-        <h3> Curso completo de UI e UX <br> 100 horas </h3>
-        <img src="images/tecno/ui_ux.png" alt="ui_ux">
-        <p> R$ <sub>399.00</sub> </p>
-        <a href="" @click.prevent="adicionarCurso"> Comprar Curso </a>
-      </div>
-      <div>
-        <h1> React </h1>
-        <h3> Curso completo de React <br> 160 horas </h3>
-        <img src="images/tecno/react.png" alt="react">
-        <p> R$ <sub>699.00</sub> </p>
-        <a href="" @click.prevent="adicionarCurso"> Comprar Curso </a>
-      </div>
-      <div>
-        <h1> Wordpress </h1>
-        <h3> Curso completo de WP <br> 100 horas </h3>
-        <img src="images/tecno/wp.png" alt="wordpress">
-        <p> R$ <sub>499.00</sub> </p>
-        <a href="" @click.prevent="adicionarCurso"> Comprar Curso </a>
-      </div>
-      <div>
-        <h1> Angular 2.0 </h1>
-        <h3> Curso completo de Angular <br> 180 horas </h3>
-        <img src="images/tecno/angular.png" alt="angular">
-        <p> R$ <sub>699.00</sub> </p>
+      <div v-for="curso in cursos" :key="curso.id">
+        <h1> {{curso.nome}} </h1>
+        <h3> {{curso.descricao}} <br> {{curso.tempo}} </h3>
+        <img :src="curso.imagem" alt="hmtl">
+        <p> R$ <sub>{{curso.valor}}</sub> </p>
         <a href="" @click.prevent="adicionarCurso"> Comprar Curso </a>
       </div>
     </section>
@@ -107,59 +57,7 @@
     </section>
   </div>
 
-  <script>
-    const vm = new Vue({
-      el: "#app",
-      data: {
-        valorTotal: 0,
-        carrinho: 0,
-      },
-      methods: {
-        scrollSuave(event) {
-          const href = event.currentTarget.getAttribute('href');
-          const section = document.querySelector(href);
-
-          section.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-          })
-        },
-        mandarMensagem() {
-          const input = document.querySelector('#inputNoticias');
-
-          if (input.value === '' || input.value === 0 || !input.value.includes("@")) {
-            alert('Preencha o campo corretamente');
-          } else {
-            alert('Fique de olho no seu e-mail, entraremos em contato.');
-            input.value = '';
-          }
-        },
-        adicionarCurso(event) {
-          const valorCurso = +event.currentTarget.parentNode.children[3].children[0].innerHTML;
-          this.valorTotal += Math.floor(valorCurso);
-          this.carrinho++;
-        },
-        finalizarCompra() {
-          if (this.carrinho === 0) {
-            alert('Sem produtos no carrinho, não é possível finalizar a compra.');
-          } else {
-            alert('Compra efetuada com sucesso.');
-            this.valorTotal = 0;
-            this.carrinho = 0;
-          }
-        }
-      },
-      filters: {
-				numeroPreco(valor) {
-					return valor.toLocaleString("pt-BR", {
-						style: "currency",
-						currency: "BRL",
-					});
-				},
-			},
-    });
-  </script>
+  <script src="js/app.js"></script>
 
 </body>
-
 </html>
